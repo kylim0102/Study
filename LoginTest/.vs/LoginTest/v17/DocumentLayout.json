@@ -1,0 +1,90 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ghckd\\Desktop\\LoginTest\\LoginTest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8BDF906D-F803-4BA8-9744-2E3BD1A73B2B}|LoginTest.csproj|c:\\users\\ghckd\\desktop\\logintest\\logintest\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BDF906D-F803-4BA8-9744-2E3BD1A73B2B}|LoginTest.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BDF906D-F803-4BA8-9744-2E3BD1A73B2B}|LoginTest.csproj|C:\\Users\\ghckd\\Desktop\\LoginTest\\LoginTest\\join.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BDF906D-F803-4BA8-9744-2E3BD1A73B2B}|LoginTest.csproj|solutionrelative:join.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BDF906D-F803-4BA8-9744-2E3BD1A73B2B}|LoginTest.csproj|C:\\Users\\ghckd\\Desktop\\LoginTest\\LoginTest\\join.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8BDF906D-F803-4BA8-9744-2E3BD1A73B2B}|LoginTest.csproj|solutionrelative:join.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BDF906D-F803-4BA8-9744-2E3BD1A73B2B}|LoginTest.csproj|C:\\Users\\ghckd\\Desktop\\LoginTest\\LoginTest\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8BDF906D-F803-4BA8-9744-2E3BD1A73B2B}|LoginTest.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Join.cs",
+              "DocumentMoniker": "C:\\Users\\ghckd\\Desktop\\LoginTest\\LoginTest\\Join.cs",
+              "RelativeDocumentMoniker": "Join.cs",
+              "ToolTip": "C:\\Users\\ghckd\\Desktop\\LoginTest\\LoginTest\\Join.cs",
+              "RelativeToolTip": "Join.cs",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAkwGQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T05:32:21.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Join.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\ghckd\\Desktop\\LoginTest\\LoginTest\\Join.cs",
+              "RelativeDocumentMoniker": "Join.cs",
+              "ToolTip": "C:\\Users\\ghckd\\Desktop\\LoginTest\\LoginTest\\Join.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "Join.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T04:39:12.867Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\ghckd\\Desktop\\LoginTest\\LoginTest\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "C:\\Users\\ghckd\\Desktop\\LoginTest\\LoginTest\\Login.cs",
+              "RelativeToolTip": "Login.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAwEQAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T04:14:00.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\ghckd\\Desktop\\LoginTest\\LoginTest\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "C:\\Users\\ghckd\\Desktop\\LoginTest\\LoginTest\\Login.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "Login.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T02:54:45.875Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
