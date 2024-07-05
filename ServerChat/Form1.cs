@@ -13,15 +13,19 @@ namespace ServerChat
         }
 
         private TcpListener listener;
+        private TcpClient client;
         private async void button1_Click(object sender, EventArgs e)
         {
             listener = new TcpListener(IPAddress.Parse("192.168.52.11"), 8090);
             listener.Start();
 
-            while(true) {
+            while (true)
+            {
                 TcpClient Client = await listener.AcceptTcpClientAsync();
-                
-               _ = HandleClient(Client);
+
+                _ = HandleClient(Client);
+
+
             }
         }
         private async Task HandleClient(TcpClient client)
@@ -36,21 +40,26 @@ namespace ServerChat
                 read = await stream.ReadAsync(Sizebuffer, 0, Sizebuffer.Length);
                 if (read == 0)
                     break;
-                
+
                 int size = BitConverter.ToInt32(Sizebuffer);
                 byte[] buffer = new byte[size];
                 read = await stream.ReadAsync(buffer, 0, buffer.Length);
-                
+
                 if (read == 0)
                     break;
 
                 string message = Encoding.UTF8.GetString(buffer, 0, read);
 
-                listBox1.Items.Add(message);  
+                listBox1.Items.Add(message);
 
-                var messageBuffer = Encoding.UTF8.GetBytes($"너가보낸거 : {message}");
+                var messageBuffer = Encoding.UTF8.GetBytes($"서버에서 다시 보냅니다. : {message}");
                 stream.Write(messageBuffer);
             }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
             
         }
     }

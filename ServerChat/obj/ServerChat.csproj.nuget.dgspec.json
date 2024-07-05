@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo\\source\\repos\\ServerChat\\ServerChat.csproj": {}
+    "C:\\Users\\Lenovo\\Source\\Repos\\Kiosk-project1\\ServerChat\\ServerChat.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo\\source\\repos\\ServerChat\\ServerChat.csproj": {
+    "C:\\Users\\Lenovo\\Source\\Repos\\Kiosk-project1\\ServerChat\\ServerChat.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\source\\repos\\ServerChat\\ServerChat.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\Source\\Repos\\Kiosk-project1\\ServerChat\\ServerChat.csproj",
         "projectName": "ServerChat",
-        "projectPath": "C:\\Users\\Lenovo\\source\\repos\\ServerChat\\ServerChat.csproj",
+        "projectPath": "C:\\Users\\Lenovo\\Source\\Repos\\Kiosk-project1\\ServerChat\\ServerChat.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\source\\repos\\ServerChat\\obj\\",
+        "outputPath": "C:\\Users\\Lenovo\\Source\\Repos\\Kiosk-project1\\ServerChat\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
