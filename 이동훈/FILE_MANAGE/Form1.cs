@@ -34,7 +34,7 @@ namespace image_test
         // Azure 스토리지 연결 문자열
         // 보안 문제 상 연결 문자열은 비공개, KAKAO TALK 참고
         //private string connectionString = "Azure Storage Connect text";
-        private string connectionString = "DefaultEndpointsProtocol=https;AccountName=kioskproject;AccountKey=7WdD4X1zax7SKV5ouf+svEtku2v7buHUWt/BeNNsY0mS4kETH/UyZP4WpaNbi7LpxPRoobEUezWY+AStK0dOGA==;EndpointSuffix=core.windows.net";
+        private string connectionString = "";
         // Azure 스토리지 명
         private string containerName = "kiosk";
 
