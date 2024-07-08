@@ -26,7 +26,7 @@ namespace image_test
             string blobName = download.Text;
             // Azure 스토리지로부터 다운로드할 파일을 저장할 경로 + 파일명
             // ex) D://test/images/dog.jpg
-            string downloadFilePath = "C://Users/ldh97/Desktop/images/"+download.Text;
+            string downloadFilePath = @"C:\Users\YJ\Desktop\image\" + download.Text;
 
             await DownloadFileAsync(blobName, downloadFilePath);
         }
@@ -47,6 +47,7 @@ namespace image_test
 
             // Azure 스토리지 클라이언트 연결
             BlobContainerClient containerClient = new BlobContainerClient(connectionString, containerName);
+
 
             // 다운로드 할 Blob에 대한 참조 가져오기
             BlobClient blobClient = containerClient.GetBlobClient(blobName);
@@ -88,6 +89,47 @@ namespace image_test
             
         }
 
+        private async Task LoadStorageList()
+        {
+            try
+            {
+                connectionString = storagekey.Text;
+                containerName = storagename.Text;
+                // Blob 서비스 클라이언트 생성
+                var blobServiceClient = new BlobServiceClient(connectionString);
+
+                // 컨테이너 클라이언트 생성
+                var containerClient = blobServiceClient.GetBlobContainerClient(containerName);
+
+                int size = containerClient.GetBlobs().Count();
+
+                List<BlobItem> items = containerClient.GetBlobs().ToList();
+
+                listBox1.Items.Clear();
+
+                for (int i = 0; i < size; i++) 
+                {
+                    listBox1.Items.Add(items[i].Name);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private async Task UploadFile()
+        {
+            connectionString = storagekey.Text;
+            containerName = storagename.Text;
+
+            BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
+            BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(containerName);
+
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -104,6 +146,45 @@ namespace image_test
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LoadStorageList();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var fileContent = string.Empty;
+            var filePath = string.Empty;
+
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    //Get the path of specified file
+                    filePath = openFileDialog.FileName;
+                    textBox1.Text = filePath;
+
+                    //Read the contents of the file into a stream
+                    var fileStream = openFileDialog.OpenFile();
+
+                    using (StreamReader reader = new StreamReader(fileStream))
+                    {
+                        fileContent = reader.ReadToEnd();
+                    }
+                }
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
