@@ -1,0 +1,7 @@
+오후 4:14 2024-07-08
+
+Git hub Merge Test
+
+git config --global user.name "aaa"
+
+git config --global user.email "aaa@bbb.ccc"
