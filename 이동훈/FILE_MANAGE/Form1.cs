@@ -120,15 +120,6 @@ namespace image_test
 
         }
 
-        private async Task UploadFile()
-        {
-            connectionString = storagekey.Text;
-            containerName = storagename.Text;
-
-            BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
-            BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(containerName);
-
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -186,6 +177,44 @@ namespace image_test
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private async void button4_Click(object sender, EventArgs e)
+        {
+            await UploadFile();
+        }
+
+        private async Task UploadFile()
+        {
+            connectionString = storagekey.Text;
+            containerName = storagename.Text;
+
+            // 업로드할 이미지 파일의 경로
+            string filepath = textBox1.Text;
+            string blobName = Path.GetFileName(filepath);
+
+            // blob client 생성
+            BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
+            BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(containerName);
+            await containerClient.CreateIfNotExistsAsync();
+
+            // Blob 참조 가져오기
+            BlobClient blobClient = containerClient.GetBlobClient(blobName);
+
+            try 
+            {
+                // 파일 스트림을 열어 Blob에 업로드
+                FileStream uploadFileStream = File.OpenRead(filepath);
+                await blobClient.UploadAsync(uploadFileStream, true);
+                uploadFileStream.Close();
+
+                MessageBox.Show("선택한 파일을 업로드합니다.", "Success Upload !", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("파일 업로드에 실패했습니다.", "Fail Upload !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
     }
