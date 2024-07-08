@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\\uC870\uC601\uD760",
+    "\\\uC870\uC601\uD760\\test",
+    "\\\uC870\uC601\uD760\\test\\test"
   ],
-  "SelectedNode": "\\ServerChat.sln",
+  "SelectedNode": "\\\uC870\uC601\uD760\\test\\test\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }
