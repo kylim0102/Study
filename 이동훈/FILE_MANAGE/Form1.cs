@@ -33,13 +33,18 @@ namespace image_test
 
         // Azure 스토리지 연결 문자열
         // 보안 문제 상 연결 문자열은 비공개, KAKAO TALK 참고
-        //private string connectionString = "Azure Storage Connect text";
         private string connectionString = "";
         // Azure 스토리지 명
-        private string containerName = "kiosk";
+        private string containerName = "";
 
         public async Task DownloadFileAsync(string blobName, string downloadFilePath)
         {
+            connectionString = storagekey.Text;
+            containerName = storagename.Text;
+
+            Console.WriteLine("커넥팅 스트링: " + connectionString);
+            Console.WriteLine("컨테이너 네임"+containerName);
+
             // Azure 스토리지 클라이언트 연결
             BlobContainerClient containerClient = new BlobContainerClient(connectionString, containerName);
 
@@ -93,6 +98,14 @@ namespace image_test
 
         }
 
-       
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
